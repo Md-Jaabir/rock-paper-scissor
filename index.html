@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <!-- displays site properly based on user's device -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link
+    href="https://fonts.googleapis.com/css2?family=Barlow+Semi+Condensed:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap"
+    rel="stylesheet">
+  <link rel="icon" type="image/png" sizes="32x32" href="./images/favicon-32x32.png">
+  <link rel="stylesheet" href="style.css">
+  <title>Frontend Mentor | Rock, Paper, Scissors</title>
+</head>
+
+<body>
+  <div class="scoreboard">
+    <h1 class="game-name">ROCK PAPER SCISSORS</h1>
+    <div class="scorebox">
+      <p>SCORE</p>
+      <h1>0</h1>
+    </div>
+  </div>
+  <div class="game ">
+    <img src="images/bg-triangle.svg" alt="triangle" class="triangle">
+    <div class="top">
+      <button onclick="select('paper')" class="choice-button" id="paper">
+        <div class="inside"><img src="images/icon-paper.svg" alt="paper"></div>
+      </button>
+      <button onclick="select('scissors')" class="choice-button" id="scissors">
+        <div class="inside"><img src="images/icon-scissors.svg" alt="scissor"></div>
+      </button>
+    </div>
+    <button onclick="select('rock')" class="choice-button" id="rock">
+      <div class="inside"><img src="images/icon-rock.svg" alt="rock"></div>
+    </button>
+  </div>
+  <div class="result hide ">
+    <div class="your-choice choice">
+      <p>YOU PICKED</p>
+      <div class="choice-button" id="paper">
+        <div class="inside"><img src="images/icon-paper.svg" alt="paper"></div>
+        <div class="round">
+          <div class="round2">
+            <div class="round3"></div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="retry-box hide">
+      <h1>YOU LOSE</h1>
+      <button class="btn-filled" onclick="retry()">PLAY AGAIN</button>
+    </div>
+    <div class="the-house-picked choice not-picked">
+      <p>THE HOUSE PICKED</p>
+      <div class="choice-button" id="scissor">
+        <div class="inside"><img src="images/icon-scissors.svg" alt="paper"></div>
+        <div class="round">
+          <div class="round2">
+            <div class="round3"></div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="rules hide">
+    <div class="popup">
+      <div class="top">
+        <h1>RULES</h1>
+        <img src="images/icon-close.svg" onclick="closeRules()" alt="close">
+      </div>
+      <img src="images/image-rules.svg" class="rule-image" alt="">
+    </div>
+  </div>
+  <button class="btn bottom" onclick="openRules()">RULES</button>
+  <script src="script.js"></script>
+</body>
+
+</html>
